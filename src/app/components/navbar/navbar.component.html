@@ -1,0 +1,13 @@
+<mat-toolbar style="height: 100px;border-radius: 50px;
+width: 640px;background: #00000030 !important;">
+<a style="height: 100px;" href=""><img height="100" src="../../../assets/Firefly_give_me_a_logo_which_its_name_is_XYZ_4708-removebg-preview.png" alt=""></a>
+<app-search></app-search>
+<a style="height: 40px;margin-left: 15px;margin-right: 15px;" [routerLink]="['/shopping-cart']"><img height="40" src="../../../assets/shopping-cart-empty-side-view-svgrepo-com.svg" alt=""></a>
+<div style="margin-left: 10px;border: solid 1px #216464;
+border-radius: 5px;
+background: #216464;width: 70px;">
+    <a (click)="signOut()" style="cursor: pointer;color: white;
+    font-size: 14px;">Sign Out</a>
+</div>
+
+  </mat-toolbar>

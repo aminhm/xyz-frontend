@@ -1,0 +1,136 @@
+
+::ng-deep simple-snack-bar{
+    justify-content: center !important;
+  }
+  
+  ::ng-deep .mat-snack-bar-container{
+    color: white !important;
+  }
+.signup-div{
+    width: 663px;
+    height: 420px;
+    border: 1px solid #7c7c7c6b;
+    background: #020021;
+    border-radius: 50px;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+
+.more-info{
+    width: 663px;
+}
+
+.signup-container{
+    align-items: center;
+    place-content: center;
+}
+.signup-forms{
+    width: 100%;
+}
+.signup-content{
+    width: 70%;
+}
+
+h1,h4{
+    color: white;
+    text-align: end;
+}
+
+h1{
+    padding-bottom: 20px;
+}
+
+h4{
+    font-size: 17px !important;
+    margin: 0;
+    align-self: center;
+    padding-left: 10px;
+    margin-inline-start: auto;
+}
+
+.form-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup{
+    color: white !important;
+
+}
+button{
+    border: none;
+    cursor: pointer;
+    background: #197D8B !important;
+                    height: 35px;
+                    width: 90px;
+                    border-radius: 7px;
+}
+
+button:hover{
+    background: #5f8388 !important;
+}
+
+.signup{
+    color: black;
+
+}
+
+.signup:hover{
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: #197D8B !important;
+    padding-left: 5px;
+}
+
+input{
+    width: 100%;
+    direction: rtl;
+}
+
+.container-poem-divider-div{
+    width: 100%;
+    height: 1.3px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .container-poem-divider{
+    width: 100%;
+      background-color: #15738D33;
+      height: 100%;
+  }
+
+
+
+@media (max-width:750px) {
+    .signup-div{
+        width: 90% !important;
+    }
+    .more-info{
+        width: 90% !important;
+    }
+}
+
+@media (max-height:500px) {
+    .signup-div{
+        height: 90% !important;
+    }
+    .more-info{
+        width: 90% !important;
+    }
+    
+}
+
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+    margin-left: 16px;
+  }
+ ::ng-deep .mat-mdc-radio-button ::ng-deep .mdc-form-field {
+    color: white !important;
+}
+::ng-deep .mat-mdc-radio-button ::ng-deep .mdc-radio ::ng-deep .mdc-radio__native-control:enabled:not(:checked)+ ::ng-deep .mdc-radio__background::ng-deep  .mdc-radio__outer-circle {
+    border-color: white !important;
+}

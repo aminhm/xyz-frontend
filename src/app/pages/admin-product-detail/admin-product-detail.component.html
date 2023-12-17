@@ -1,0 +1,147 @@
+<div style="display: flex;margin: 100px;text-align: left;">
+    <div style="width: 30%;margin-right: 25px;">
+        <img style="width: 100%;" src="../../../assets/no-photo-available.png" alt="">
+        <div style="display: flex;justify-content: center;">
+            <p style="font-weight: bold; font-size: 20px;">Amount: </p> <p style="font-size: 20px;">{{amount}}</p>
+        </div>
+        <br>
+        <div style="display: flex;justify-content: center;">
+            <div style="margin-right: 10px;border: solid 1px #216464;
+border-radius: 5px;
+background: #216464;width: 30px;height: 30px;">
+    <a (click)="increaseProductNumber()" style="width: 100%;
+    height: 100%;text-align-last: center;cursor: pointer;
+    display: block;cursor: pointer;color: white;
+    font-size: 30px;display: flex;
+    place-items: center;
+    justify-content: center;"><p style="margin: 0;">+</p></a>
+</div>
+
+<p style="margin: 0;font-size: 20px;align-self: center;">
+    {{productNumber}}
+</p>
+
+<div style="margin-left: 10px;border: solid 1px #216464;
+border-radius: 5px;
+background: #216464;width: 30px;height: 30px;">
+    <a (click)="decreaseProductNumber()" style="width: 100%;
+    height: 100%;text-align-last: center;cursor: pointer;
+    display: block;cursor: pointer;color: white;
+    font-size: 30px;display: flex;
+    place-items: center;
+    justify-content: center;"><p style="margin: 0;">-</p></a>
+</div>
+        </div>
+<br>
+<br>
+<div style="display: flex;justify-content: center;">
+
+
+        <div style="margin-right: 10px;border: solid 1px #216464;
+border-radius: 5px;
+background: #216464;width: 150px;height: 30px;">
+    <a (click)="onSubmit()" style="width: 100%;
+    height: 100%;text-align-last: center;cursor: pointer;
+    display: block;cursor: pointer;color: white;
+    font-size: 14px;display: flex;
+    place-items: center;
+    justify-content: center;"><p style="margin: 0;">Update the product</p></a>
+</div>
+    </div>
+</div>
+    <div style="width: 70%;">
+        <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()" novalidate>
+        <div style="display: flex;">
+            <p style="font-weight: bold; font-size: 20px;">Name: </p> <input style="direction: ltr;" type="text" class="form-control" formControlName="name"> 
+        </div>
+        <br>
+        <div style="display: flex;">
+            <p style="font-weight: bold; font-size: 20px;">Price: </p> <input style="direction: ltr;" type="text" class="form-control" formControlName="price">  €
+        </div>
+
+        <br>
+    </form>
+        <div style="display: flex;">
+            <mat-form-field>
+                <mat-label>Finland</mat-label>
+                <select matNativeControl [(ngModel)]="selectedFinlandStore" name="finlandStore">
+                  <option value="" selected></option>
+                    <option *ngFor="let store of finlandStores" [value]="store.warehouse_id">{{store.address}}</option>
+                
+                </select>
+              </mat-form-field>
+            <div style="display: flex;justify-content: center;">
+                <div style="margin-right: 10px;border: solid 1px #216464;
+    border-radius: 5px;
+    background: #216464;width: 30px;height: 30px;">
+        <a (click)="increaseFinlandProductNumber()" style="width: 100%;
+        height: 100%;text-align-last: center;cursor: pointer;
+        display: block;cursor: pointer;color: white;
+        font-size: 30px;display: flex;
+        place-items: center;
+        justify-content: center;"><p style="margin: 0;">+</p></a>
+    </div>
+    
+    <p style="margin: 0;font-size: 20px;align-self: center;">
+        {{finlandProductNumber}}
+    </p>
+    
+    <div style="margin-left: 10px;border: solid 1px #216464;
+    border-radius: 5px;
+    background: #216464;width: 30px;height: 30px;">
+        <a (click)="decreaseFinlandProductNumber()" style="width: 100%;
+        height: 100%;text-align-last: center;cursor: pointer;
+        display: block;cursor: pointer;color: white;
+        font-size: 30px;display: flex;
+        place-items: center;
+        justify-content: center;"><p style="margin: 0;">-</p></a>
+    </div>
+            </div>
+        </div>
+
+        <br>
+        <div style="display: flex;">
+            <mat-form-field>
+                <mat-label>Sweden</mat-label>
+                <select matNativeControl [(ngModel)]="selectedSwedenStore" name="swedenStore">
+                  <option value="" selected></option>
+                    <option *ngFor="let store of swedenStores" [value]="store.warehouse_id">{{store.address}}</option>
+                
+                </select>
+              </mat-form-field>
+            <div style="display: flex;justify-content: center;">
+                <div style="margin-right: 10px;border: solid 1px #216464;
+    border-radius: 5px;
+    background: #216464;width: 30px;height: 30px;">
+        <a (click)="increaseSwedenProductNumber()" style="width: 100%;
+        height: 100%;text-align-last: center;cursor: pointer;
+        display: block;cursor: pointer;color: white;
+        font-size: 30px;display: flex;
+        place-items: center;
+        justify-content: center;"><p style="margin: 0;">+</p></a>
+    </div>
+    
+    <p style="margin: 0;font-size: 20px;align-self: center;">
+        {{swedenProductNumber}}
+    </p>
+    
+    <div style="margin-left: 10px;border: solid 1px #216464;
+    border-radius: 5px;
+    background: #216464;width: 30px;height: 30px;">
+        <a (click)="decreaseSwedenProductNumber()" style="width: 100%;
+        height: 100%;text-align-last: center;cursor: pointer;
+        display: block;cursor: pointer;color: white;
+        font-size: 30px;display: flex;
+        place-items: center;
+        justify-content: center;"><p style="margin: 0;">-</p></a>
+    </div>
+            </div>
+        </div>
+
+
+
+
+        
+    </div>
+    
+</div>

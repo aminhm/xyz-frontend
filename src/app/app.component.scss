@@ -1,0 +1,31 @@
+/* @font-face {
+    font-family: "nastaliq";
+    src: url("../assets/fonts/IranNastaliq.ttf");
+  } */
+
+  .border{
+    border: none !important;
+}
+
+.daily-poem-stanza-1,.daily-poem-stanza-2,.daily-poem-stanza-3,.daily-poem-stanza-4{
+    /* font-family: 'nastaliq' !important; */
+    text-align: center;
+}
+.daily-poem-div{
+    position: absolute;
+    right: 35px;
+}
+a{
+    color: black !important;
+    font-size: 15px;
+}
+
+.desktop{
+    // background:url('../assets/img/background2.jpg');
+    justify-content: left;
+}
+
+.mobile{
+    // background:url('../assets/img/background3.jpg');
+    justify-content: center;
+}

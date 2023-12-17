@@ -1,0 +1,80 @@
+<!-- <app-navbar  style="position: fixed; width: 100%; z-index: 10"></app-navbar> -->
+<!-- <div [style]="mobileScreen ? {'height': '97vh','display' : 'inline-block'} : {'height': '70.5vh'}"> -->
+    <div class="signin-container" 
+    style="text-align: -webkit-center;height: 70.8vh;">
+        <div class="signin-div" style="margin-top: 10%;">
+            <div class="signin-content" style="width: 70%;">
+    
+    
+            <h1 style="text-align: -webkit-center;color: white;font-weight: bold;">
+                Login
+            </h1>
+    
+            <div class="signin-forms">
+              <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="form-group">
+              
+                        <div style="width: 50%;align-self: center;">
+                        <h4 style="float: left;font-size: 17px !important;" >
+                            Username
+                        </h4>
+                        
+                    </div>
+                    <span style="display: flex;position: relative;width: 100%;height: 35px;">
+                        <input style="direction: ltr;" type="text" class="form-control" formControlName="username"> 
+                        </span>
+                  </div>
+
+                  <br>
+    
+                    <div class="form-group">
+    
+                          
+                      <div style="width: 50%;align-self: center;">
+                          <h4 style="float: left;" >
+                              Password
+                              
+                          </h4>
+                      </div>
+                      <span style="display: flex;position: relative;width: 100%;height: 35px;">
+                              
+                              
+                        <input style="direction: ltr;" class="form-control" formControlName="password">
+                        
+                    </span>
+                      
+                  </div>
+                  <br>
+    <div class="form-group" style="justify-content: center;">
+                    <button [disabled]="reactiveFormControl.username.invalid || reactiveFormControl.password.invalid" class="btn custom-btn1">
+                      <a class="signin">
+                        Login
+                      </a>
+                      
+                    </button>
+                  </div>
+                  <br>
+                  <div class="form-group" style="justify-content: center;">
+                    <div style="color: white;font-size: 14px;">
+                      Don't Have an Account?<a class="signup" style="color: #afafaf !important;" [routerLink]="['/signup']">SignUp</a> 
+                    </div>
+                  </div>
+                  </form>
+            </div>
+          
+    
+            
+    
+                
+    
+    
+              
+    
+    
+            </div>
+            
+            
+        </div>
+
+    </div>
+    <!-- </div> -->
